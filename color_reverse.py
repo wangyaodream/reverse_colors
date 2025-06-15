@@ -137,6 +137,8 @@ def main():
         threshold = int(sys.argv[4]) if len(sys.argv) > 4 and mode == "bw" else 127
         
         print(f"单张图片处理模式: {input_path}")
+
+        success = None
         
         if mode == "reverse":
             success = reverse_colors(input_path, output_path)
