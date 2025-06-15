@@ -3,6 +3,7 @@ import numpy as np
 import sys
 import os
 
+
 def convert_to_black_white(image_path, output_path=None, background_threshold=200):
     # 读取图片
     img = cv2.imread(image_path)
@@ -103,6 +104,7 @@ def process_directory(input_dir, output_dir, mode="reverse", threshold=127):
     print(f"处理完成！成功处理了 {success_count}/{len(png_files)} 个文件")
     return True
 
+
 def main():
     if len(sys.argv) < 3:
         print("使用方法:")
@@ -160,6 +162,7 @@ def main():
         process_directory(input_path, output_dir, mode, threshold)
     else:
         print(f"错误: 输入路径不存在或不是有效的文件/目录: {input_path}")
+
 
 if __name__ == "__main__":
     main()
